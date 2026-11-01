@@ -30,13 +30,13 @@ The study uses the [Healthcare Dataset](https://www.kaggle.com/datasets/prasad22
 | Duplicate records removed | 534 |
 | Records used for analysis | 54,966 |
 
-The dataset is not included in this repository. It can be downloaded from the Kaggle link above.
+The dataset is not included in this repository. The notebook downloads it automatically from Kaggle using the `kagglehub` library.
 
 ## Repository Structure
 
 | File | Description |
 | --- | --- |
-| `[notebook-name].ipynb` | Google Colab notebook containing the full workflow, from data loading and preprocessing to the analysis and visualisation for each objective |
+| `FinalYearProject.ipynb` | Google Colab notebook containing the full workflow, from data loading and preprocessing to the analysis and visualisation for each objective |
 | `README.md` | Project description and instructions for replicating the analysis |
 
 ## Methodology
@@ -57,11 +57,10 @@ The dataset is not included in this repository. It can be downloaded from the Ka
 
 ## How to Run
 
-1. Download the dataset from the Kaggle link above.
-2. Open the notebook in Google Colab.
-3. Upload the dataset CSV file to the Colab session, or place it in Google Drive and mount the drive.
-4. Update the file path in the data loading cell if necessary.
-5. Run the cells in order from the top of the notebook.
+1. Open `FinalYearProject.ipynb` in Google Colab (select **Open in Colab** from GitHub, or upload the notebook to Colab).
+2. Run the cells in order from the top of the notebook.
+3. Allow access to Google Drive when prompted. The notebook mounts Google Drive to save the cleaned dataset (`healthcare_dataset_cleaned.csv`) and the generated charts.
+4. The dataset is downloaded automatically from Kaggle by the notebook, so no manual download is needed.
 
 ## Requirements
 
@@ -70,9 +69,10 @@ The dataset is not included in this repository. It can be downloaded from the Ka
 - NumPy
 - Matplotlib
 - Seaborn
-- SciPy (for the chi-square test, if the notebook uses it)
+- SciPy (used for the chi-square test of independence)
+- kagglehub (used to download the dataset)
 
-Google Colab provides these libraries by default, so no local installation is required.
+Google Colab provides most of these libraries by default, so no local installation is required. If `kagglehub` is not available in the Colab session, install it by running `pip install kagglehub` in a cell.
 
 ## Ethical Considerations
 
